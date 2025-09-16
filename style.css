@@ -1,0 +1,215 @@
+:root{
+  --bg:#0f1720;
+  --accent:#ffffff;
+  --muted:#6b7280;
+  --card:#f8f9fb;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Montserrat,system-ui,Arial;color:#111;background:#fff}
+
+/* NAV */
+.nav{
+  position:fixed;left:0;right:0;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:linear-gradient(180deg,rgba(0,0,0,0.35),transparent);backdrop-filter:blur(2px)
+}
+.brand{color:var(--accent);font-weight:800;letter-spacing:2px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px;align-items:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px}
+.nav a:hover{color:#fff}
+
+/* HERO */
+.hero{height:72vh;min-height:520px;background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:relative}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,6,8,0.55),rgba(4,6,8,0.65))}
+.hero-inner{position:relative;z-index:2;text-align:center;color:#fff;max-width:980px;padding:40px}
+.small-hi{font-family:Playfair Display,serif;font-size:44px;margin:0 0 6px;font-weight:700}
+.big-title{font-size:56px;margin:0 0 10px;font-weight:300;letter-spacing:1px}
+.hero .social{margin-top:18px;display:flex;gap:12px;justify-content:center}
+.social a{width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center;background:rgba(255,255,255,0.08);color:#fff;text-decoration:none;font-size:14px}
+
+/* CONTENT WRAPPER */
+.wrap{max-width:1100px;margin:60px auto;padding:0 24px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:start}
+.about-photo{background:#fff;padding:18px;border-radius:6px;box-shadow:0 6px 18px rgba(15,23,36,0.06)}
+.about-photo img{display:block;width:100%;border-radius:4px}
+.about h2{margin:0 0 8px;font-size:22px}
+.about .muted{color:var(--muted);font-size:13px;margin-bottom:12px}
+.about p{line-height:1.6;color:#333}
+
+.skills{margin-top:18px}
+.skill{margin-bottom:12px}
+.skill .label{font-size:13px;margin-bottom:6px;color:#444}
+.bar{background:#e9e9ed;height:12px;border-radius:8px;overflow:hidden}
+.bar-inner{height:100%;background:#111;border-radius:8px}
+.btns{display:flex;gap:12px;margin-top:18px}
+.btn{padding:10px 14px;border-radius:6px;border:1px solid #e3e3e6;background:#111;color:#fff;text-decoration:none;font-size:14px}
+.btn.secondary{background:transparent;color:#111;border:1px solid #ddd}
+
+/* SERVICES */
+.section-title{text-align:center;margin:70px 0 36px;font-size:26px;font-weight:700}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{background:var(--card);padding:28px;border-radius:8px;box-shadow:0 10px 30px rgba(15,23,36,0.06);text-align:center}
+.service .icon{width:56px;height:56px;border-radius:50%;display:inline-grid;place-items:center;background:#fff;margin-bottom:12px;box-shadow:0 6px 12px rgba(15,23,36,0.04)}
+.service h4{margin:8px 0 6px;font-size:16px}
+.service p{color:var(--muted);font-size:13px;line-height:1.6}
+
+/* FOOTER SPACING */
+.spacer{height:80px}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .nav{padding:12px 20px}
+  .hero{height:56vh}
+  .small-hi{font-size:32px}
+  .big-title{font-size:36px}
+  .about{grid-template-columns:1fr;}
+  .services{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .nav ul{display:none}
+  .hero{height:48vh;padding:18px}
+  .big-title{font-size:26px}
+  .services{grid-template-columns:1fr}
+}
+
+
+.footer {
+  background: #152a41;       /* dark blue background */
+  color: #e8f0fb;            /* light text */
+  padding: 60px 20px;
+}
+
+.footer .wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer h2 {
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+
+.footer .lead {
+  font-size: 18px;
+  color: #a8bed9;            /* muted text */
+  margin: 0 0 25px;
+  line-height: 1.5;
+}
+
+.footer .cta {
+  display: inline-block;
+  background: #19c37d;       /* green button */
+  color: #083a2b;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.footer .cta:hover {
+  background: #17a86c;
+}
+
+.footer .info label {
+  display: block;
+  font-size: 13px;
+  color: #a8bed9;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.footer .info a,
+.footer .info p {
+  color: #e8f0fb;
+  font-size: 17px;
+  margin: 0 0 20px;
+  text-decoration: none;
+}
+
+.footer .info a:hover {
+  color: #8cc4ff;
+  text-decoration: underline;
+}
+
+.footer .social {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.footer .social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #cfe2ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer .social a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .footer .wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer h2 {
+    font-size: 32px;
+  }
+}
+
+.services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px 50px 60px;
+    }
+
+    .service {
+      background: #fff;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    .service:hover {
+      background: #f0faff;
+      border-color: #00bcd4;
+      box-shadow: 0 8px 20px rgba(0,188,212,0.3);
+      transform: translateY(-6px);
+      cursor: pointer;
+    }
+
+    .service .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .service h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .service p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+  
